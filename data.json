@@ -1,0 +1,217 @@
+[
+    {
+        "id": 0,
+        "artist": "Ludwig van Beethoven",
+        "song": "V Symfonia c-moll, cz. I"
+    },
+    {
+        "id": 1,
+        "artist": "Ennio Morricone",
+        "song": "A Fistful Of Dollars ('Za garść dolarów')"
+    },
+    {
+        "id": 2,
+        "artist": "Ennio Morricone",
+        "song": "L'Arena"
+    },
+    {
+        "id": 3,
+        "artist": "Fryderyk Chopin",
+        "song": "Marsz żałobny, III cz. Sonaty b-moll"
+    },
+    {
+        "id": 4,
+        "artist": "Feliks Mendelssohn",
+        "song": "Marsz weselny, uwertura do 'Snu nocy letnie' Szekspira"
+    },
+    {
+        "id": 5,
+        "artist": "Jan Sebastian Bach",
+        "song": "Toccata i Fuga d-moll BWV 565"
+    },
+    {
+        "id": 6,
+        "artist": "Ludwig van Beethoven",
+        "song": "Sonata księżycowa cz. I"
+    },
+    {
+        "id": 7,
+        "artist": "Johann Strauss II (syn)",
+        "song": "An der schönen blauen Donau (Nad pięknym modrym Dunajem)"
+    },
+    {
+        "id": 8,
+        "artist": "Johann Strauss I (ojciec)",
+        "song": "Marsz Radetzky'ego"
+    },
+    {
+        "id": 9,
+        "artist": "Nikołaj Rimski-Korsakow",
+        "song": "Lot trzmiela"
+    },
+    {
+        "id": 10,
+        "artist": "George Gershwin",
+        "song": "Summertime - aria z opery Porgy and Bess"
+    },
+    {
+        "id": 11,
+        "artist": "Niccolo Paganini",
+        "song": "24 Kaprysy"
+    },
+    {
+        "id": 12,
+        "artist": "Joseph Kosma",
+        "song": "Autumn Leaves"
+    },
+    {
+        "id": 13,
+        "artist": "Jan Sebastian Bach",
+        "song": "Preludium z Suity wiolonczelowej G dur"
+    },
+    {
+        "id": 14,
+        "artist": "Wolfgang Amadeus Mozart",
+        "song": "Eine kleine Nachtmusik (KV 525)"
+    },
+    {
+        "id": 15,
+        "artist": "Antonio Vivaldi",
+        "song": "Koncert nr 3 F-dur 'Jesień' cz. I"
+    },
+    {
+        "id": 16,
+        "artist": "Antonio Vivaldi",
+        "song": "Koncert nr 3 F-dur 'Jesień' cz. III"
+    },
+    {
+        "id": 17,
+        "artist": "Antonio Vivaldi",
+        "song": "Koncert nr 4 f-moll 'Zima'"
+    },
+    {
+        "id": 18,
+        "artist": "Antonio Vivaldi",
+        "song": "Koncert nr 2 g-moll 'Lato'"
+    },
+    {
+        "id": 19,
+        "artist": "Antonio Vivaldi",
+        "song": "Koncert nr 1 E-durl 'Wiosna'"
+    },
+    {
+        "id": 20,
+        "artist": "Georg Friedrich Heandel",
+        "song": "Oratorium Mesjasz - Alleluja"
+    },
+    {
+        "id": 21,
+        "artist": "Tomaso Albinoni",
+        "song": "Adagio g-moll"
+    },
+    {
+        "id": 22,
+        "artist": "Jan Sebastian Bach",
+        "song": "Aria na strunie G"
+    },
+    {
+        "id": 23,
+        "artist": "Jan Sebastian Bach",
+        "song": "Fantazja i fuga g-moll BWV542 - Fantazja"
+    },
+    {
+        "id": 24,
+        "artist": "Jan Sebastian Bach",
+        "song": "Fantazja i fuga g-moll BWV542 - Fuga"
+    },
+    {
+        "id": 25,
+        "artist": "Jan Sebastian Bach",
+        "song": "V Koncert brandenburski D-dur"
+    },
+    {
+        "id": 26,
+        "artist": "Jan Sebastian Bach",
+        "song": "Chorał 'Jesus bleibet meine Freude'"
+    },
+    {
+        "id": 27,
+        "artist": "Jan Sebastian Bach",
+        "song": "Sanctus"
+    },
+    {
+        "id": 28,
+        "artist": "Jan Sebastian Bach",
+        "song": "Gloria"
+    },
+    {
+        "id": 29,
+        "artist": "Jan Sebastian Bach",
+        "song": "Agnus Dei"
+    },
+    {
+        "id": 30,
+        "artist": "Wolfgang Amadeus Mozart",
+        "song": "Marsz turecki"
+    },
+    {
+        "id": 31,
+        "artist": "Wolfgang Amadeus Mozart",
+        "song": "Symfonia (KV 550) g-moll"
+    },
+    {
+        "id": 32,
+        "artist": "Wolfgang Amadeus Mozart",
+        "song": "Requiem - Lacrimosa"
+    },
+    {
+        "id": 33,
+        "artist": "Wolfgang Amadeus Mozart",
+        "song": "Czarodziejski flet - Aria Królowej Nocy"
+    },
+    {
+        "id": 34,
+        "artist": "Wolfgang Amadeus Mozart",
+        "song": "Czarodziejski flet - Aria Papageno Papagena"
+    },
+    {
+        "id": 35,
+        "artist": "Ludwig van Beethoven",
+        "song": "Sonata fortepianowa 'Patetyczna'"
+    },
+    {
+        "id": 36,
+        "artist": "Ludwig van Beethoven",
+        "song": "VII Symfonia - cz.II Allegretto"
+    },
+    {
+        "id": 37,
+        "artist": "Billy Strayhorn",
+        "song": "Take The A Train"
+    },
+    {
+        "id": 38,
+        "artist": "Juan Tizol",
+        "song": "Caravan"
+    },
+    {
+        "id": 39,
+        "artist": "Fryderyk Chopin",
+        "song": "Etiuda Rewolucyjn"
+    },
+    {
+        "id": 40,
+        "artist": "Fryderyk Chopin",
+        "song": "Preludium e- moll"
+    },
+    {
+        "id": 41,
+        "artist": "Fryderyk Chopin",
+        "song": "Polonez As-dur op. 53"
+    },
+    {
+        "id": 42,
+        "artist": "Antonin Dvorak",
+        "song": "Symphony No.9- Allegro con fuoco"
+    }
+]

@@ -1,0 +1,107 @@
+.musicList {
+    background-color: #7DD181;
+    width: 31%;
+    height: 40rem;
+    border-radius: 1rem;
+    display: inline-block;
+    overflow-y: auto;
+}
+
+.musicList .songName {
+    padding: 0.5rem 0;
+    margin: 0;
+    margin-bottom: 1px;
+    font-size: 1.2rem;
+    background-color: #6aad6d;
+    color: white;
+    cursor: pointer;
+}
+
+.musicList .songName:hover {
+    background-color: #5b965e;
+}
+
+.musicList .songName:active {
+    background-color: #4c7e4e;
+}
+
+.musicList .songName.selected {
+    background-color: #578f5a;
+}
+
+.musicList .songName.selected:hover {
+    background-color: #4c804e;
+}
+
+.musicList .songName.selected:active {
+    background-color: #467447;
+}
+
+.activeMusic {
+    display: inline-block;
+    margin-left: 1%;
+    width: 64%;
+    height: 40rem;
+    border-radius: 1rem;
+    background-color: #7DD181;
+}
+
+#pause {
+    display: none;
+}
+
+.noteContainer {
+    text-align: center;
+    padding-top: 10%;
+}
+
+.songName {
+    font-size: 1.4rem;
+    width: 100%;
+    margin: 2% 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.songName p {
+    padding: 0.5%;
+    display: inline;
+}
+
+.progressBar {
+    border-radius: 1rem;
+    background-color: #C9FFE2;
+    margin: 0 15%;
+    width: 70%;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.progression {
+    border-radius: 1rem;
+    width: 0%;
+    background-color: #4B7F52;
+    height: 1rem;
+}
+
+.navBar {
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.navBar svg {
+    padding: 0 5%;
+}
+
+.progressBarContainer {
+    text-align: center;
+}
+
+.progressBarTime,
+.progressBar,
+.progressBarTime p {
+    display: inline-block;
+    margin: 0 1%;
+    padding: 0;
+}
