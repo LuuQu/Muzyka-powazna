@@ -7,6 +7,10 @@ function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
     } else {
         fromSlider.value = from;
     }
+    if (activeNumOfSongs != Math.abs(to - from) + 1) {
+        activeNumOfSongs = Math.abs(to - from) + 1;
+        changeAmountOfSongs(activeNumOfSongs);
+    }
 }
 
 function controlToInput(toSlider, fromInput, toInput, controlSlider) {
@@ -19,6 +23,10 @@ function controlToInput(toSlider, fromInput, toInput, controlSlider) {
     } else {
         toInput.value = from;
     }
+    if (activeNumOfSongs != Math.abs(to - from) + 1) {
+        activeNumOfSongs = Math.abs(to - from) + 1;
+        changeAmountOfSongs(activeNumOfSongs);
+    }
 }
 
 function controlFromSlider(fromSlider, toSlider, fromInput) {
@@ -29,6 +37,10 @@ function controlFromSlider(fromSlider, toSlider, fromInput) {
         fromInput.value = to;
     } else {
         fromInput.value = from;
+    }
+    if (activeNumOfSongs != Math.abs(to - from) + 1) {
+        activeNumOfSongs = Math.abs(to - from) + 1;
+        changeAmountOfSongs(activeNumOfSongs);
     }
 }
 
@@ -42,6 +54,10 @@ function controlToSlider(fromSlider, toSlider, toInput) {
     } else {
         toInput.value = from;
         toSlider.value = from;
+    }
+    if (activeNumOfSongs != Math.abs(to - from) + 1) {
+        activeNumOfSongs = Math.abs(to - from) + 1;
+        changeAmountOfSongs(activeNumOfSongs);
     }
 }
 
@@ -108,7 +124,16 @@ function fromSingleTimerInput(slider, inputMinutes, inputSeconds) {
         fillSlider(fromSlider, slider, '#C6C6C6', '#25daa5', slider);
     }
 }
-
+function changeAmountOfSongs(value) {
+    amountOfSongsSlider.max = value;
+    amountOfSongsNumber.max = value;
+    if (amountOfSongsNumber.value > value) {
+        amountOfSongsSlider.value = value;
+        amountOfSongsNumber.value = value;
+    }
+    fillSlider(fromSlider, amountOfSongsSlider, '#C6C6C6', '#25daa5', amountOfSongsSlider);
+}
+let activeNumOfSongs = 43;
 const fromSlider = document.querySelector('#fromSlider');
 const toSlider = document.querySelector('#toSlider');
 const fromInput = document.querySelector('#fromInput');

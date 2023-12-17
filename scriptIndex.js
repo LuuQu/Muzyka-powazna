@@ -6,14 +6,14 @@ let currentSongTime = 0;
 let audio = new Audio("");
 async function fetchData() {
     try {
-      const response = await fetch('data.json');
-      const data = await response.json();
-      json = data;
-      data.forEach(element => {
-        AddSong(element.id,element.artist,element.song)
-      });
+        const response = await fetch('data.json');
+        const data = await response.json();
+        json = data;
+        data.forEach(element => {
+            AddSong(element.id, element.artist, element.song)
+        });
     } catch (error) {
-      console.error('Błąd podczas ładowania pliku JSON:', error);
+        console.error('Błąd podczas ładowania pliku JSON:', error);
     }
 }
 function AddSong(id, artist, song) {
@@ -22,7 +22,7 @@ function AddSong(id, artist, song) {
     var divElement = document.createElement("div");
     divElement.className = "songName";
     divElement.id = id;
-    divElement.setAttribute("onclick","ChangeSong(this)");
+    divElement.setAttribute("onclick", "ChangeSong(this)");
     var artistParagraph = document.createElement("p");
     artistParagraph.classList.add("artist");
     artistParagraph.textContent = artist;
@@ -55,12 +55,12 @@ function ChangeSong(container) {
     });
     container.classList.add("selected");
     activeId = parseInt(container.id);
-    
-    let audioPath = "/music/" + activeId + ".mp3";
+
+    let audioPath = "music/" + activeId + ".mp3";
     currentSongTime = 0;
     audio.pause();
     audio = new Audio(audioPath);
-    audio.oncanplaythrough = function() {
+    audio.oncanplaythrough = function () {
         SetDuration(audio.duration);
     };
     Play();
@@ -72,7 +72,12 @@ function Play() {
     play.style.display = "none";
     pause.style.display = "inline";
     PlayAudio(activeId);
-    audio.play();
+    if (activeId == -1) {
+        ChangeSong(document.getElementById(0));
+    }
+    else {
+        audio.play();
+    }
 }
 function Pause() {
     let play = document.getElementById("play");
@@ -82,26 +87,26 @@ function Pause() {
     audio.pause();
 }
 function NextSong() {
-    if(activeId == -1) {
+    if (activeId == -1) {
         ChangeSong(document.getElementById(0));
         activeId = 0;
     }
     else {
-        activeId = (activeId+1)%(json.length);
+        activeId = (activeId + 1) % (json.length);
         ChangeSong(document.getElementById(activeId));
     }
     Play();
 }
 function PreviousSong() {
-    if(activeId == -1) {
+    if (activeId == -1) {
         ChangeSong(document.getElementById(0));
     }
     else {
-        if(activeId == 0) {
-            activeId = json.length-1;
-        } 
+        if (activeId == 0) {
+            activeId = json.length - 1;
+        }
         else {
-            activeId = activeId-1;
+            activeId = activeId - 1;
         }
         ChangeSong(document.getElementById(activeId));
     }
@@ -109,23 +114,23 @@ function PreviousSong() {
 }
 function ChangeProgressionBar(ev) {
     // Odczytaj szerokość kontenera
-  let containerRect = ev.getBoundingClientRect();
-  let containerWidth = containerRect.width;
-  // Odczytaj pozycję X myszki względem okna przeglądarki
-  let mouseX = event.pageX;
-  // Oblicz procentowy udział pozycji X względem szerokości kontenera
-  let percentageFromLeft = ((mouseX - containerRect.left) / containerWidth) * 100;
+    let containerRect = ev.getBoundingClientRect();
+    let containerWidth = containerRect.width;
+    // Odczytaj pozycję X myszki względem okna przeglądarki
+    let mouseX = event.pageX;
+    // Oblicz procentowy udział pozycji X względem szerokości kontenera
+    let percentageFromLeft = ((mouseX - containerRect.left) / containerWidth) * 100;
 
-  let progression = document.getElementById("progression");
-  progression.style.width = percentageFromLeft + "%";
-  currentSongTime = songTime * percentageFromLeft / 100;
+    let progression = document.getElementById("progression");
+    progression.style.width = percentageFromLeft + "%";
+    currentSongTime = songTime * percentageFromLeft / 100;
 }
 function PlayAudio(number) {
-    audio.oncanplaythrough = function() {
+    audio.oncanplaythrough = function () {
         SetDuration(audio.duration);
-        var intervalId = setInterval(function() {
+        var intervalId = setInterval(function () {
             var currentTime;
-            if(Math.abs(currentSongTime - audio.currentTime) > 1) {
+            if (Math.abs(currentSongTime - audio.currentTime) > 1) {
                 currentTime = currentSongTime;
                 audio.currentTime = currentSongTime;
             }
@@ -149,7 +154,7 @@ function SetDuration(duration) {
     let seconds = roundedDuration % 60;
     let minutes = (roundedDuration - seconds) / 60;
     let timeRight = document.getElementById("timeRight");
-    if(seconds < 10) {
+    if (seconds < 10) {
         timeRight.textContent = minutes + ":0" + seconds;
     }
     else {
@@ -162,7 +167,7 @@ function ChangeActiveTime(activeTime) {
     let seconds = roundedDuration % 60;
     let minutes = (roundedDuration - seconds) / 60;
     let timeRight = document.getElementById("timeLeft");
-    if(seconds < 10) {
+    if (seconds < 10) {
         timeRight.textContent = minutes + ":0" + seconds;
     }
     else {
