@@ -203,11 +203,10 @@ function SetSongs() {
     for (let i = 0; i < amountOfSongs; i++) {
         let value = -1;
         do {
-            value = Math.floor(Math.random() * (maxValue - minValue)) + minValue;
+            value = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
         } while (songIndexes.includes(value));
         songIndexes.push(value);
     }
-    console.log(songIndexes);
 }
 function Play(id) {
     if (audioId != id) {
