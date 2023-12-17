@@ -1,0 +1,139 @@
+.settings {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+}
+
+.songRange,
+.amountOfSongs,
+.songFragmentMenagment {
+    display: inline-block;
+    width: 31%;
+    border-radius: 1rem;
+    background-color: #6aad6d;
+    color: white;
+}
+
+.amountOfSongs,
+.songFragmentMenagment {
+    margin-left: 1.5%;
+}
+
+.songRange p,
+.amountOfSongs p,
+.songFragmentMenagment p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.amountOfSongs input[type=range],
+.songFragmentMenagment input[type=range] {
+    width: 20%;
+    margin-top: 1rem;
+    margin-left: 5%;
+}
+
+.amountOfSongs input[type=number] {
+    width: 15%;
+    margin: 3rem 0;
+    margin-left: 42.5%;
+    text-align: center;
+}
+
+.songFragmentMenagment input[type=number] {
+    width: 15%;
+    margin: 3rem 0;
+    margin-left: 2%;
+    text-align: center;
+}
+
+#songFragmentMenagmentNumberMinutes {
+    margin-left: 32%;
+}
+
+body div.mainBox {
+    display: block;
+}
+
+.beginTestButton {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #6aad6d;
+    height: 5rem;
+    width: 96%;
+    border-radius: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.beginTestButton:hover {
+    background-color: #5d9760;
+}
+
+.beginTestButton:active {
+    background-color: #4e8051;
+
+}
+
+.beginTestButton p {
+    padding-top: 1rem;
+}
+
+.testContainer {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: #B6F9C9;
+    height: 30rem;
+    width: 96%;
+    border-radius: 1rem;
+}
+
+.singleSong {
+    background-color: #7DD181;
+    border-radius: 1rem;
+    width: 98%;
+    margin-left: 1%;
+    height: 4rem;
+    display: flex;
+}
+
+.author,
+.song,
+.fragment {
+    width: 30%;
+    padding-left: 1%;
+}
+
+.authorInput,
+.songInput {
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 95%;
+    height: 2rem;
+    margin-top: 0.8rem;
+    padding: 0 1rem;
+}
+
+.songInput {
+    margin-left: 3rem;
+}
+
+.authorInput:hover,
+.authorInput:active,
+.authorInput:focus,
+.songInput:hover,
+.songInput:active,
+.songInput:focus {
+    background-color: #73c477;
+    border-bottom: 1px solid white;
+}
+
+.fragment {
+    margin-left: 8rem;
+}

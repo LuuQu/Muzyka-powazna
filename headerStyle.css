@@ -21,6 +21,7 @@ header div {
   padding-top: 0.1rem;
   padding-bottom: 1.5rem;
   cursor: pointer;
+  user-select: none;
 }
 
 header div p {
@@ -47,6 +48,7 @@ body div.mainBox {
 
 svg {
   cursor: pointer;
+  user-select: none;
 }
 
 /* Firefox */

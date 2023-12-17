@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="headerStyle.css">
+    <link rel="stylesheet" href="styleTest.css">
+    <link rel="stylesheet" href="rangeStyle.css">
     <title>Muzyka poważna</title>
 </head>
 <header>
@@ -20,7 +23,78 @@
         <p>&nbsp;</p>
     </div>
 </header>
+
 <body>
+    <div class="mainBox">
+        <div class="settings">
+            <div class="songRange">
+                <p>Zakres piosenek</p>
+                <div class="range_container">
+                    <div class="sliders_control">
+                        <input id="fromSlider" type="range" value="0" min="0" max="43" />
+                        <input id="toSlider" type="range" value="43" min="0" max="43" />
+                    </div>
+                    <div class="form_control">
+                        <div class="form_control_container">
+                            <div class="form_control_container__time">Min</div>
+                            <input class="form_control_container__time__input" type="number" id="fromInput" value="0"
+                                min="0" max="43" />
+                        </div>
+                        <div class="form_control_container">
+                            <div class="form_control_container__time">Max</div>
+                            <input class="form_control_container__time__input" type="number" id="toInput" value="43"
+                                min="0" max="43" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="amountOfSongs">
+                <p>Ilość piosenek w teście</p>
+                <input id="amountOfSongsSlider" type="range" value="10" min="1" max="43" />
+                <input id="amountOfSongsNumber" class="form_control_container__time__input" type="number" value="10"
+                    min="1" max="43" />
+            </div>
+            <div class="songFragmentMenagment">
+                <p>Minimalny czas każdego fragmentu piosenki</p>
+                <input id="songFragmentMenagmentSlider" type="range" value="10" min="15" max="300" />
+                <input id="songFragmentMenagmentNumberMinutes" class="form_control_container__time__input" type="number"
+                    value="0" min="0" max="5" />
+                <input id="songFragmentMenagmentNumberSeconds" class="form_control_container__time__input" type="number"
+                    value="15" min="1" max="59" />
+            </div>
+        </div>
+        <div class="testContainer">
+            <div class="singleSong">
+                <div class="author">
+                    <input class="authorInput" type="text">
+                </div>
+                <div class="song">
+                    <input class="songInput" type="text">
+                </div>
+                <div class="fragment">
+                    <svg onclick="Play(this)" class="play" xmlns="http://www.w3.org/2000/svg" height="60" width="60"
+                        viewBox="0 0 384 512">
+                        <path fill="#C9FFE2"
+                            d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                    </svg>
+                    <svg onclick="Pause(this)" class="pause" xmlns="http://www.w3.org/2000/svg" height="60" width="60"
+                        viewBox="0 0 320 512">
+                        <path fill="#C9FFE2"
+                            d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="60" width="60" viewBox="0 0 512 512">
+                        <path fill="#C9FFE2"
+                            d="M125.7 160H176c17.7 0 32 14.3 32 32s-14.3 32-32 32H48c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32s32 14.3 32 32v51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="beginTestButton">
+            <p>Rozpocznij test</p>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
+<script src="slider.js"></script>
+
 </html>
