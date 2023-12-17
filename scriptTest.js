@@ -143,6 +143,7 @@ function BeginTest(button) {
     let buttonDescription = button.children[0];
     buttonDescription.textContent = buttonPhaseTable[buttonPhase];
     if (buttonPhase == 0) {
+        audioId = -1;
         audio.pause();
         DisableEnableSliders(false);
         while (document.getElementById("testContainer").firstChild) document.getElementById("testContainer").removeChild(document.getElementById("testContainer").lastChild);
